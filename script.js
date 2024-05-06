@@ -38,7 +38,7 @@ function capitalizeAll(event){
 
 function isExist(){
   var word = document.getElementById("isExist").value;
-  var str1 = "riting into an HTML element, using innerHTML Writing into an HTML using document.write()writing into an alert message using windows.alert"
+  var str1 = "Writing into an HTML element, using innerHTML Writing into an HTML using document.write()writing into an alert message using windows.alert priyanka"
   
   var result = str1.includes(word);
     if(result){
@@ -155,3 +155,60 @@ function isPalindrome(e){
     document.getElementById("isPalindromeResult").innerHTML = "String is not Palindrome";
   }
 }
+
+function truncateString(){
+  const string1 = document.getElementById("truncateString").value;
+  let truncateNumber = document.getElementById("truncateNumber").value;
+   let resultString ="";
+  if(Number(truncateNumber) !== NaN){
+      for(let i =0; i<=truncateNumber-1; i++){
+          resultString= resultString+string1[i];
+      }
+      resultString=resultString+"...";
+  }
+  else{
+      console.log("enter number");
+  }
+  console.log(truncateNumber);
+  document.getElementById("truncateStringResult").innerHTML =resultString;
+  }
+  
+  function validateEmail(){
+      let email = document.getElementById("validateEmail").value;
+      var re = /\S+@\S+\.\S+/;
+      if(re.test(email)){
+        document.getElementById("validateEmailResult").innerHTML ="email id valid";
+  
+      }
+      else{
+        document.getElementById("validateEmailResult").innerHTML = "Email is not valid";
+      }
+    }
+  
+  
+  
+  function maskString(){
+   let str = document.getElementById("maskString").value;
+  
+   console.log(str);
+  
+  let result = "";
+  
+  for (let i=0; i<= str.length-4; i++){
+      result = result+"*";
+  
+      
+  
+  }
+  
+  for(let j=str.length-4; j<=str.length-1;j++){
+      result=result+str[j]
+      
+  }
+  
+  
+  document.getElementById("maskStringResult").innerHTML =result;
+  
+  
+  }
+  

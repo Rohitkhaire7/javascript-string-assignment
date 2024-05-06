@@ -78,6 +78,27 @@
         <h3 id="isPalindromeResult"></h3>
     </div>
 
+    <h2>truncateString </h2>
+        <lable>Enter string</lable>
+        <input type="text"  id="truncateString">
+        <input type="text" onkeyup="truncateString(event)" id="truncateNumber">
+        <h2 id="truncateStringResult"></h2>
+    </div>
+    <div>
+        <h2>validateEmail </h2>
+        <label>Enter Email</label>
+        <input type="text" onkeyup="validateEmail()" id="validateEmail">
+        <h2 id="validateEmailResult"></h2>
+    </div>
+
+    <div>
+        <h2>maskString </h2>
+        <label>Enter String for Masking</label>
+        <input type="text" id="maskString">
+        <button onclick="maskString()"> String masking</button>
+        <h3 id="maskStringResult"></h3>
+    </div>
+
     <script src="script.js"></script>
     
 </body>
